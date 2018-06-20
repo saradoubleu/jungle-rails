@@ -8,4 +8,10 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id]
   end
 
+  # def display
+  #   if Product.quantity == 0
+  #     render 'sold_out'
+  #   else
+  #   end
+  # end
 end
