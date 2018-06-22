@@ -2,6 +2,16 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    #show all products within the (image, name and description), quanitty
+    # Overall total of the order
+    #email that was used
+    @line_items = Line_Items.where(order_id == @order:true)
+
+    @line_items.each do |prod|
+    byebug
+      puts "#{line.items.product_id}"
+    end
+
   end
 
   def create
